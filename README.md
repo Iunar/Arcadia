@@ -4,11 +4,13 @@ A simple linux rice inspired by classic art.
 #### Dependencies
 - [MaoMaoWM](https://github.com/DreamMaoMao/maomaowm)
 - [Fuzzel](https://codeberg.org/dnkl/fuzzel)
-- [Kitty](https://sw.kovidgoyal.net/kitty/)
 - [Ranger](https://github.com/ranger/ranger)
+- [Waybar](https://github.com/Alexays/Waybar)
+- [Kitty](https://sw.kovidgoyal.net/kitty/)
 - [Swww](https://github.com/LGFae/swww)
+- [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
 #### Installing
-Once all dependencies are installed simply clone the repo and move all the config files.
+Once all dependencies are installed simply clone the repo and move all the config files into their respective directories.
 ```bash
 $ git clone https://github.com/Iunar/Arcadia.git
 $ cd Arcadia
