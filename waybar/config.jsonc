@@ -1,0 +1,129 @@
+// -*- mode: jsonc -*-
+{
+	"layer": "top", // Waybar at top layer
+	"position": "top", // Waybar position (top|bottom|left|right)
+	"height": 24, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    "modules-left": [
+	//"custom/seperator",
+	"custom/date_icon",
+	"custom/date",
+	"custom/seperator",
+	"custom/clock_icon",
+	"custom/clock",
+	"custom/seperator",
+	"custom/weather_icon",
+	"custom/weather",
+	"custom/seperator",
+	"custom/temperature_icon",
+	"custom/temperature"],
+    "modules-center": [
+	//"dwl/window"
+	"dwl/tags"
+    ],
+    "modules-right": [
+	    "custom/volume_icon",
+	    "custom/volume",
+	    "custom/seperator",
+	    "custom/cpu_temperature_icon",
+	    "temperature",
+	    "custom/seperator",
+	    "custom/cpu_icon",
+	    "cpu",
+	    "custom/seperator",
+	    "custom/memory_icon",
+	    "memory"
+    ],
+
+    "dwl/tags": {
+	    "num-tags": 9,
+	    "hide-vacant": false,
+	    "tag-labels": ["", "", "", "", "", "", "", "", ""]
+    },
+
+    "custom/seperator": {
+	    "format": "󰇙"
+    },
+
+    "custom/weather_icon": {
+	    "format": "󰖐 "
+    },
+    "custom/weather": {
+	    "format": "{text}",
+	    "interval": 300,
+	    "exec": "weather weather"
+    },
+    "custom/temperature_icon": {
+	    "format": " "
+    },
+    "custom/temperature": {
+	    "format": "{text}",
+	    "interval": 300,
+	    "exec": "weather temperature"
+    },
+    "custom/sunset": {
+	    "format": "{text}",
+	    "interval": 300,
+	    "exec": "weather sunset"
+    },
+
+    "idle_inhibitor": {
+	    "format": "{icon}",
+	    "format-icons": {
+		    "activated": "",
+		    "deactivated": ""
+	    }
+    },
+    "tray": {
+	"spacing": 10
+    },
+    "custom/date_icon": {
+	    "format": " 󰸘 "
+    },
+    "custom/date": {
+	    "interval": 300,
+	    "tooltip": false,
+	    "exec": "get-fancy-date",
+	    "format": "{text}"
+    },
+
+    "custom/clock_icon":{
+	"format": "󱑂 "
+    },
+    "custom/clock": {
+	    "interval": 60,
+	    "tooltip": false,
+	    // "exec": "date '+%l:%M%p'",
+	    "exec": "date +'%l:%M%p' | sed 's/^ *//'", // check this later
+	    "format": "{text}"
+    },
+    "custom/cpu_icon": {
+	    "format": ""
+    },
+    "custom/memory_icon": {
+	    "format": " "
+    },
+    "memory": {
+	    "format": "{}% "
+    },
+    "temperature": {
+	    "format": "{temperatureC}°C"
+    },
+    "custom/volume_icon": {
+	    "format": "󰥛 "
+    },
+    "custom/volume": {
+	    "format": "{text}%",
+	    "interval": 300,
+	    "exec": "pamixer --get-volume"
+    },
+    "pulseaudio": {
+	// "scroll-step": 1, // %, can be a float
+	"format": "{volume}%",
+	"on-click": "pavucontrol"
+    },
+    "custom/cpu_temperature_icon": {
+	"format": ""
+    }
+}

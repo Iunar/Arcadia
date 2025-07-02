@@ -1,0 +1,130 @@
+@define-color background            #202020;
+@define-color foreground            #d0d0d0;
+@define-color cursor                #d0d0d0;
+@define-color selection_background  #303030;
+@define-color color0                #151515;
+@define-color color8                #505050; /* GREY */
+@define-color color1                #ac4142;
+@define-color color9                #ac4142; /* RED */
+@define-color color2                #7e8d50;
+@define-color color10               #7e8d50; /* GREEN */
+@define-color color3                #e5b566;
+@define-color color11               #e5b566; /* YELLOW */
+@define-color color4                #6c99ba;
+@define-color color12               #6c99ba; /* BLUE */
+@define-color color5                #9e4e85;
+@define-color color13               #9e4e85; /* PURPLE */
+@define-color color6                #7dd5cf;
+@define-color color14               #7dd5cf; /* CYAN */
+@define-color color7                #d0d0d0;
+@define-color color15               #f5f5f5;
+@define-color selection_foreground #202020;
+
+* {
+	/* `otf-font-awesome` is required to be installed for icons */
+	all: unset;
+	font-family: JetBrainsMono NF;
+	font-size: 14px;
+}
+
+window#waybar {
+	background-color: @background;
+}
+
+#tags{
+	padding: 2 4 2 4;
+	color: @foreground;
+}
+
+#tags button {
+	background-color: @background;
+	color: @color8;
+	/* Padding is (n + 6) */
+	padding: 2 14 2 8;
+}
+#tags button.occupied {
+	color: @foreground;
+}
+#tags button.focused {
+	color: @color11;
+}
+#tags button.urgent {
+	color: @color9;
+}
+
+#window {
+	color: @foreground;
+}
+
+#custom-clock_icon {
+	color: @color12;
+}
+
+#custom-date_icon {
+	color: @color10;
+}
+
+#custom-weather_icon {
+	color: @color11;
+}
+
+#custom-temperature_icon {
+	color: @color9;
+}
+
+#custom-volume_icon {
+	color: @color13;
+}
+
+#custom-cpu_temperature_icon {
+	color: @color9;
+}
+
+#custom-cpu_icon {
+	color: @color11;
+}
+
+#custom-seperator {
+	color: @color8;
+}
+
+#custom-memory_icon {
+	color: @color10;
+}
+
+#custom-date,
+#custom-clock {
+	color: @foreground;
+}
+
+
+#custom-clock_icon,
+#custom-date_icon,
+#custom-weather_icon,
+#custom-temperature_icon,
+#custom-volume_icon,
+#custom-cpu_temperature_icon,
+#custom-cpu_icon {
+	padding: 0;
+	margin: 0;
+}
+
+#cpu,
+#memory,
+#disk,
+#temperature,
+#custom-volume,
+#tray {
+	/*padding: 0 8;*/
+	color: @foreground;
+	background-color: @background;
+}
+
+
+#cpu {
+	margin-left: 2;
+}
+
+#temperature {
+	margin-left: 2;
+}
