@@ -1,5 +1,6 @@
 # Arcadia
 A simple linux rice inspired by classic art.
+![Arcadia](/screenshots/arcadia_1.png)
 #### Dependencies
 - [MaoMaoWM](https://github.com/DreamMaoMao/maomaowm)
 - [Fuzzel](https://codeberg.org/dnkl/fuzzel)
